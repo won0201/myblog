@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>블로그 - 게시글 목록</title>
+  </head>
+  <body>
+    <h1>게시글 목록</h1>
+    <ul>
+      {% for post in posts %}
+      <li><a href="{% url 'post_detail' post.id %}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>

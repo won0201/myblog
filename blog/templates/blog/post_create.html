@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>게시글 작성</title>
+  </head>
+  <body>
+    <h1>게시글 작성</h1>
+    <form method="post">
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit">작성</button>
+    </form>
+  </body>
+</html>

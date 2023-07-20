@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>메인 페이지</title>
+  </head>
+  <body>
+    <h1>블로그 메인 페이지</h1>
+    {% if user.is_authenticated %}
+    <p>{{ user.username }}님, 환영합니다!</p>
+    <a href="{% url 'post_create' %}">게시글 작성하기</a>
+    <a href="{% url 'post_list' %}">게시글 목록 보기</a>
+    {% else %}
+    <p>블로그 입장하기</p>
+    <a href="{% url 'register' %}">회원가입</a>
+    <a href="{% url 'login' %}">로그인</a>
+    {% endif %}
+  </body>
+</html>
